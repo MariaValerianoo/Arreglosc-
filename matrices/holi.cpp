@@ -1,2 +1,0 @@
-cout<<"Holi";
-cin>>perro;
