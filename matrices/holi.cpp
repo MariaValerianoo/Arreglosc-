@@ -1,1 +1,2 @@
 cout<<"Holi";
+cin>>perro;
