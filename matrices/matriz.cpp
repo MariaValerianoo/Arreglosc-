@@ -9,6 +9,7 @@ int main(){
     {
         cout<<calculadora[i][j];
     }
+     cout<<endl;
 
     }
 
