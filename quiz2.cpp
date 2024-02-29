@@ -24,15 +24,6 @@ int main() {
             suma++;
             }
         }
-         /*if(numeros1[j]!=1 && numeros1[j]!=0){
-            cout<<"Numero incorrecto, vuelve a intentarlo\n";
-            cout << "Ingrese 1 si hay mina y 0 si no hay mina: " << endl; 
-            cin >> numeros1[j];
-            if (numeros1[j] == 1) {
-            suma++;
-            }
-
-        }*/
     }
     cout << "Las minas son: ";
     for (int i = 0; i < cant1; i++) {
