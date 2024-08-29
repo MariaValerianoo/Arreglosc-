@@ -89,30 +89,24 @@ public:
     }
     
     void remove(int i){
-    // Verificar si el índice es válido
+    // Verificara si el índice es válido
     if (i < 0 || i >= size) {
-        return; // índice fuera de rango, no hacer nada
+        return; 
     }
-
-    // Caso especial: eliminar el primer nodo
     if (i == 0) {
-        Node<T>* temp = ptr;  // Guardar el nodo a eliminar
-        ptr = ptr->getNext(); // Mover el puntero al siguiente nodo
-        delete temp;          // Eliminar el nodo
+        Node<T>* temp = ptr;  
+        ptr = ptr->getNext(); 
+        delete temp;          
     } else {
-        // Recorrer la lista hasta el nodo en la posición i-1
         Node<T>* temp = ptr;
         for (int j = 0; j < i - 1; j++) {
             temp = temp->getNext();
         }
 
-        // Ahora temp apunta al nodo en la posición i-1
-        Node<T>* nodoAEliminar = temp->getNext(); // El nodo a eliminar es el siguiente
-        temp->setNext(nodoAEliminar->getNext());  // Ajustar el puntero para omitir el nodo eliminado
-        delete nodoAEliminar;  // Eliminar el nodo
+        Node<T>* nodoAEliminar = temp->getNext(); 
+        temp->setNext(nodoAEliminar->getNext());  
+        delete nodoAEliminar;  
     }
-
-    // Reducir el tamaño de la lista
     size--;
        
     
@@ -338,8 +332,6 @@ public:
     }
     
     void generar_matriz(){
-        //Genere la matriz, a partir de los artículos
-        //Use el método: matriz.addValInColumna(ac,id);
         for (int i = 0; i < articulos.get_size(); i++) {
             Articulo* art = articulos.get(i)->getDato();
             matriz.addValInColumna(art->get_area_conocimiento(), art->getID());
